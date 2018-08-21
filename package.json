@@ -1,0 +1,12 @@
+{
+  "name": "Zcmagic",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "node-xlsx": "^0.12.1"
+  }
+}
