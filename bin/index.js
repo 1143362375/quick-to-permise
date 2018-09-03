@@ -23,7 +23,7 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-console.log(`请输入${chalk.blue('-init')}进行项目初始化`);
+// console.log(`请输入${chalk.blue('-init')}进行项目初始化`);
 
 
 // rl.question('请输入xlsx文件名及文件路径，格式为xxx.xlsx&XXXX/XXX/XX', (answer) => {
@@ -40,11 +40,13 @@ if (!config.init) {
     menuPath = config.path.menuPath;
 }
 if (flag) {
+    console.log(process.argv)
+
     switch (order) {
         case undefined:
         case '-start':
             if (!xlsxName || !menuName || !xlsxPath || !menuPath) {
-                console.log(`${chalk.red('警告')} 请执行${chalk.blue('-init')}命令进行项目初始化`);
+                console.log(`请执行${chalk.blue('-init')}命令进行项目初始化`);
             } else {
                 loadFiles(xlsxName, menuName, xlsxPath, menuPath);
             }

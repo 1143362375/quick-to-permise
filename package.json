@@ -1,12 +1,23 @@
 {
-  "name": "Zcmagic",
+  "name": "qtp",
   "version": "1.0.0",
-  "private": true,
+  "description": "快速权限生成工具",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/index.js"
   },
   "dependencies": {
     "chalk": "^2.4.1",
     "node-xlsx": "^0.12.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "1143362375"
+  },
+  "keywords": [
+    "xlsx"
+  ],
+  "author": "Zcmagic",
+  "license": "ISC"
 }
