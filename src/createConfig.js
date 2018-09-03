@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // 生产配置文件
-module.export = (xlsxName, menuName, xlsxPath, menuPath) => {
+const createConfig = (xlsxName, menuName, xlsxPath, menuPath) => {
     const config = {
         init: false,
         name: {
@@ -17,6 +17,9 @@ module.export = (xlsxName, menuName, xlsxPath, menuPath) => {
         if (err) {
             console.log(err);
         }
-        console.log('配置文件创建成功！');
+        console.log('配置文件创建成功！内容如下：');
+        console.log(config)
     })
 }
+
+exports = module.exports = createConfig;

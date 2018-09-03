@@ -1,10 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 const xlsx = require('node-xlsx');
+const createNameObj = require('./utils').createNameObj;
 
 
 // 读取xlsx文件，并按格式写入menu.js中
-module.export = (xlsxName, menuName, xlsxPath, menuPath) => {
+const loadFiles = (xlsxName, menuName, xlsxPath, menuPath) => {
     const fsPath = path.join(xlsxPath, `${xlsxName}`);
     const DataPath = path.join(menuPath, `${menuName}`);
 
@@ -29,3 +30,5 @@ module.export = (xlsxName, menuName, xlsxPath, menuPath) => {
         })
     });
 }
+
+exports = module.exports = loadFiles;

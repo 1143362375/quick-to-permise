@@ -1,8 +1,8 @@
 {
   "name": "qtp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "快速权限生成工具",
-  "main": "index.js",
+  "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node bin/index.js"
@@ -15,6 +15,7 @@
     "type": "git",
     "url": "1143362375"
   },
+  "module": "dist/my-library.es.js",
   "keywords": [
     "xlsx"
   ],

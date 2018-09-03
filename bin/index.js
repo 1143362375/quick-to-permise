@@ -2,7 +2,6 @@ const readline = require('readline');
 const chalk = require('chalk');
 const loadFiles = require('../src/loadFile');
 const createConfig = require('../src/createConfig');
-const createNameObj = require('../src/utils').createNameObj;
 const config = require('../config.json');
 
 const order = process.argv[2];
@@ -40,8 +39,6 @@ if (!config.init) {
     menuPath = config.path.menuPath;
 }
 if (flag) {
-    console.log(process.argv)
-
     switch (order) {
         case undefined:
         case '-start':
@@ -52,17 +49,20 @@ if (flag) {
             }
             break;
         case '-change':
-            console.log(`请输入xlsx及menu文件名及文件路径，格式为${chalk.blue('xlsx xxx.xlsx XXXX/XXX/XX menu xxx.js XXXX/XXX/XXX')}`);
+            createConfig(process.argv[4], process.argv[7], process.argv[5], process.argv[8]);  
             break;
         case '-init':
-            console.log(`请输入xlsx及menu文件名及文件路径，格式为${chalk.blue('xlsx xxx.xlsx XXXX/XXX/XX menu xxx.js XXXX/XXX/XXX')}`);
-            console.log(process.argv[3])
+            createConfig(process.argv[4], process.argv[7], process.argv[5], process.argv[8]);
+            loadFiles(process.argv[4], process.argv[7], process.argv[5], process.argv[8]);        
             break;
         case '-h':
         case '-help':
             console.log(`${chalk.blue('-start')}      启动项目`);
-            console.log(`${chalk.blue('-init')}       初始化项目`);
-            console.log(`${chalk.blue('-change')}     修改配置`);
+            console.log('一键启动无需更改');
+            console.log(`${chalk.blue('-init')}       初始化项目:`);
+            console.log(`请输入xlsx及menu文件名及文件路径，格式为${chalk.blue('xlsx xxx.xlsx XXXX/XXX/XX menu xxx.js XXXX/XXX/XXX')}`);
+            console.log(`${chalk.blue('-change')}     修改配置:`);
+            console.log(`请输入xlsx及menu文件名及文件路径，格式为${chalk.blue('xlsx xxx.xlsx XXXX/XXX/XX menu xxx.js XXXX/XXX/XXX')}`);
             break;
         default:
             console.log('come on baby')
@@ -76,6 +76,4 @@ rl.on('close', function () {
     console.log('see you again!');
     process.exit(0);
 });
-
-
 
