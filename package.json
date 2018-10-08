@@ -1,11 +1,13 @@
 {
   "name": "qtp",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "快速权限生成工具",
-  "main": "bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/index.js"
+    "start": "node ./bin/index.js"
+  },
+  "bin": {
+    "qtp": "./bin/index.js"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -13,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "1143362375"
+    "url": "git+https://github.com/1143362375/quick-to-permise"
   },
   "module": "dist/my-library.es.js",
   "keywords": [

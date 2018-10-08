@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const readline = require('readline');
 const chalk = require('chalk');
 const loadFiles = require('../src/loadFile');
@@ -21,14 +23,6 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout,
 });
-
-// console.log(`请输入${chalk.blue('-init')}进行项目初始化`);
-
-
-// rl.question('请输入xlsx文件名及文件路径，格式为xxx.xlsx&XXXX/XXX/XX', (answer) => {
-//     // 对答案进行处理
-//     console.log(answer.indexOf('xlsx'))
-// });
 
 
 // 不是初始化配置文件，则不用修改，直接赋值;
